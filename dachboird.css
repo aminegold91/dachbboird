@@ -1,0 +1,641 @@
+:root{
+  --bgblue: #5461F1;
+  --bluwhite: #61C7D8;
+}
+
+*{
+    padding: 0;
+    margin: 0 0 0 0;
+    box-sizing: border-box;
+    color: #444;
+    font-family: sans-serif;
+    text-decoration: none;
+  }
+  body{
+    background: #ccc;
+  }
+  body.active{
+    background: #333;
+  }
+  header{
+    display: none;
+  }
+  
+   @media (max-width: 420px) {
+     .wrap header.active {
+       display: block;
+       width: 280px;
+       position: fixed;;
+       height: 100%;
+       z-index: 1000;
+       border-right: 2px solid #444;
+     }
+     /* .wrap header.active .close{
+       position: absolute;
+       width: 50px;
+       height: 50px;
+       background: #D86B61;
+       right: 0;
+       text-align: center;
+       font-size: 19px;
+       line-height: 50px; */
+     
+     .wrap header.active .c-img{
+       width: 200px;
+       height: 200px;
+       margin: 20px auto;
+     }
+     .wrap header.active .c-img img{
+       width: 200px;
+     }
+     .wrap header.active h3 {
+       text-align: center;
+       margin-bottom: 20px;
+     }
+     .wrap header.active button {
+       width: 220px;
+       height: 40px;
+       
+       position: relative;
+       left: 50%;
+       transform: translateX(-50%);
+       border: none;
+       background: var(--bgblue);
+       color: #fff;
+     }
+   }
+  
+  @media (min-width: 805px){
+    .wrap header{
+        display: block;
+    }
+    .wrap header .pofile{
+        width: 100%;
+        padding: 15px;
+    }
+    .wrap header .pofile .c-img{
+        background: #bbb;
+        width: 100px;
+        margin: 20px auto;
+        height: 100px;
+        border-radius: 50%;
+    }
+    .wrap header .pofile .c-img img{
+        width: 100%;
+    }
+    .wrap header .pofile h3{
+        text-align: center;
+        margin: 10px auto;
+    }
+    .wrap header .pofile button {
+        width: 100%;
+        padding: 10px 15px;
+        border: none;
+        background: var(--bgblue);
+        color: #fff;
+        transition: .3s all;
+    }
+    .wrap header .pofile button:active{
+        padding: 10px 20px;
+        background: #aaa;
+    } 
+     
+    
+    .wrap nav{
+        display: none;
+    }
+  }
+  
+  .wrap{
+    width: 100%;
+    background: teal;
+   
+  }
+  .wrap header{
+    width: 25%;
+    height:100vh;
+    background: #ddd;
+    float: left;
+    
+  }
+  
+  .wrap header .list {
+    padding: 20px 10px;
+  }
+  .wrap header .list ul li{
+    padding: 10px;
+    width: 100%;
+    list-style: none;
+  }
+  .wrap header .list ul li a{
+    width: 310px;
+    padding-right: 110px;
+    font-size: 20px;
+    cursor: none;
+  }
+  .wrap header .list ul li i{
+    color: var(--bgblue);
+    font-size: 24px;
+  }
+  .wrap header .list ul li:hover{
+    background: var(--bgblue);
+    color: #fff;
+  }
+  .wrap header .list ul li a:hover {
+    color: #fff;
+  }
+ 
+ 
+  
+ 
+  @media (max-width: 420px) {
+   .wrap header{
+      display: none;
+    }
+  }
+  
+ .wrap nav{
+    width: 100%;
+    height: 70px;
+    background: #eee;
+    float: left;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    padding: 0 15px;
+  }
+  nav.active{
+    background: #555;
+    color: #fff;
+  }
+  @media (min-width: 805px) {
+    .wrap nav {
+      width: 75%;
+    }
+    .wrap nav .btns .btn{
+        display: none;
+    }
+  }
+  
+  nav .search {
+    background: lightblue;
+    height: 35px;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    /* min-width: 320px; */
+  }
+  nav .search input{
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+    border: none;
+    outline: none;
+  }
+  nav .search i{
+    position: absolute;
+    right: 10px;
+    line-height: 40px;
+    font-size: 19px;
+  }
+  nav .btns{
+    display: inline-flex;
+  }
+  nav .btns .btn,.icon,.mode{
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    background: #fff;
+    margin: 0 2px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .3s ease;
+  }
+  nav .btns .btn:active{
+    background: var(--bgblue);
+  }
+  nav .btns .icon:active{
+    background: var(--bgblue);
+  }
+  nav .btns .mode:active{
+    background: var(--bgblue);
+  }
+.box.active{
+  width: 300px;
+  height: 300px;
+  background: #aaa;
+  position: absolute;
+  right: 20px;
+  z-index: 1000;
+  top: 60px;
+  border-radius: 8px;
+}
+.box.active .bar{
+  width: 20px;
+  height: 20px;
+  background: #aaa;
+  position: absolute;
+  right: 43px;
+  transform: rotate(45deg);
+  border-radius: 2px;
+  top: -3px;
+  z-index: 100;
+}
+  /* nav .btn i:hover{
+    color: white;
+  }
+  nav .icon i:hover{
+    color: white;
+  }
+  nav .mode i:hover{
+    color: white;
+  } */
+   aside{
+    width: 100%;
+    background: #ddd;
+  } 
+  
+  aside .heading{
+    float: left;
+    padding: 10px;
+  }
+  aside .heading.active{
+    background: #333;
+    color: #fff;
+  }
+  aside .heading h3{
+    border-bottom: 3px solid #ddd;
+    padding: 10px;
+    width: 100%;
+    margin-left: 15px;
+    
+  }
+  aside .heading h3.active{
+    color: #fff;
+  }
+  aside section{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    float: right;
+    padding: 10px;
+    align-items: top;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  section.active {
+    background: #333;
+  }
+  aside section .comment,.categorer,.tutor{
+    width: 216px;
+    background: #eee;
+    margin: 10px;
+    padding: 20px ;
+  }
+  aside section .comment.active{
+    background: #666;
+    color: #fff;
+  }
+  
+  aside section .comment.active h3{
+    color: #fff;
+  }
+  aside section .comment.active p{
+    color: #fff;
+  }
+  aside section .comment.active p span {
+    color: var(--bluwhite);
+  }
+  aside section .comment.active button{
+    background: var(--bluwhite);
+  }
+  aside section .categorer.active{
+    background: #666;
+  }
+  aside section .categorer.active h3{
+    color: #fff;
+  }
+  aside section .tutor.active{
+    background: #666;
+  }
+  aside section .tutor.active h3{
+    color: #fff;
+  }
+  #aside #heading2.active h3{
+    color: #fff;
+  }
+  #aside section .cours-html.active{
+    background: #666;
+    color: #fff;
+  }
+  #aside section .cours-html.active .top .right .nom{
+    color:  #fff;
+  }
+    #aside section .cours-html.active .top .right .date{
+      color: #fff;
+    }
+    #aside section .cours-html.active  p {
+      color: #fff;
+    }    
+    
+    #aside section .cours-css.active{
+      background: #666;
+    }
+    section .cours-css.active .top .right .nom{
+      color: #fff;
+    }
+    section .cours-css.active .top .right .date{
+      color: #fff;
+    }
+    section .cours-css.active p{
+      color: #fff;
+    }
+    #aside section .cours-js.active {
+      background: #666;
+    }
+    section .cours-js.active .top .right .nom{
+      color: #fff;
+    }
+    section .cours-js.active .top .right .date{
+      color: #fff;
+    }
+    section .cours-js.active p {
+      color: #fff;
+    }
+  @media (max-width: 426px) {
+    aside section .comment,.categorer,.tutor {
+      width: 100%;
+    }
+  }
+  aside section .comment h3,.categorer h3,.tutor h3{
+    padding-bottom: 10px;
+  }
+  aside section .comment p span,.categorer p span,.tutor p span{
+    color: #5461F1;
+  }
+  aside section .comment button{
+    background: #5461F1;
+    border: none;
+    padding: 10px 15px;
+    color: #fff;
+    margin: 10px 0;
+  }
+  aside section .categorer button{
+    background: #bbb;
+    border: none;
+    padding: 10px 15px;
+    margin: 10px 0;
+    font-size: 16px;
+  }
+  aside section .categorer button i{
+    font-size: 18px;
+  }
+
+
+  aside section .tutor button{
+    background: #5461F1;
+    border: none;
+    padding: 10px 15px;
+    margin: 10px 0;
+  }
+  aside section .tutor button{
+    background: #bbb;
+    border: none;
+    padding: 10px 15px;
+    margin: 10px 0;
+    font-size: 16px;
+  }
+  aside section .tutor button i{
+    font-size: 18px;
+  }
+  footer{
+    position: fixed;
+    width: 100%;
+    height: 40px;
+    border-top: 1px solid grey;
+    bottom: 0;
+    text-align: center;
+    line-height: 30px;
+    background-color: #ddd;
+    font-weight: 300;
+    font-size: 12px;
+    font-family:  monospace;
+  }
+  
+  aside section .cours-html,.cours-css,.cours-js{
+    width: 216px;
+    background: #eee;
+    margin: 10px;
+    padding: 20px;
+    
+  }
+  
+  @media (max-width: 426px){
+    aside section .cours-html,.cours-css,.cours-js{
+      width: 100%;
+    }
+  }
+  aside section .cours-html .top{
+    display: flex;
+  }
+  
+  aside section .cours-html .left{
+    width: 60px;
+    height: 60px;
+    background: teal;
+    border-radius: 50%;
+  }
+  aside section .cours-html .left .c-img{
+    width: 100%;
+    height: 100%;
+
+  }
+  aside section .cours-html .left .c-img img{
+    width: 100%;
+  }
+  aside section .cours-html .right{
+    height: 60px;
+    padding: 10px 8px;
+    
+  }
+  aside section .cours-html .right .nom{
+    font-size: 18px;
+    font-weight: 700;
+  }
+  aside section .cours-html .right .date{
+    color: #555;
+    font-weight: 400;
+  }
+  aside section .cours-css .top {
+    display: flex;
+  }
+  aside section .cours-css .left{
+    width: 60px;
+    height: 60px;
+    background: teal;
+    border-radius: 50%;
+  }
+  aside section .cours-css .left .c-img{
+    width: 100%;
+    height: 100%;
+  }
+  aside section .cours-css .left .c-img img{
+    width: 100%;
+  }
+  aside section .cours-css .right{
+    
+    height: 60px;
+    padding: 10px 8px;
+  }
+  aside section .cours-css .right .nom{
+    font-size: 18px;
+    font-weight: 700;
+  }
+  aside section .cours-css .right .date{
+    color: #555;
+    font-weight: 400;
+  }
+  aside section .cours-js .top {
+   
+    display: flex;
+  }
+  aside section .cours-js .left{
+    width: 60px;
+    height: 60px;
+    background: teal;
+    border-radius: 50%;
+  }
+  aside section .cours-js .left .c-img{
+    width: 100%;
+    height: 100%;
+  }
+  aside section .cours-js .left .c-img img{
+    width: 100%;
+  }
+  aside section .cours-js .right{
+    
+    height: 60px;
+    padding: 10px 8px;
+  }
+  aside section .cours-js .right .nom{
+    font-size: 18px;
+    font-weight: 700;
+  }
+  aside section .cours-js .right .date{
+    color: #555;
+    font-weight: 400;
+  }
+  aside section .cours-html .c-html{
+    width: 100%;
+    height: 300px;
+    background: #B9641E;
+    margin: 15px auto;
+    position: relative;
+    
+  }
+  aside section .cours-html .c-html p{
+    margin: 10px;
+    position: absolute;
+    background: #555;
+    padding: 5px 8px;
+    color: #ccc;
+  }
+  aside section .cours-html .c-html i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 200px;
+    height: 200px;
+    font-size: 200px;
+    color: #D89361;
+    filter: drop-shadow(5px 5px 3px black)
+  }
+  aside section .cours-html  p{
+    font-weight: 600;
+    margin: 10px 0;
+  }
+  aside section .cours-html button{
+    padding: 13px 20px;
+    background:  #5461F1;
+    color: #fff;
+    border: none;
+  }
+  
+  aside section .cours-css .c-html{
+    width: 100%;
+    height: 300px;
+    background: #29659E;
+    margin: 15px auto;
+    position: relative;
+  }
+  aside section .cours-css .c-html i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    font-size: 200px;
+    color: #4D98E0;
+    filter: drop-shadow(5px 5px 3px black)
+  }
+  aside section .cours-css .c-html p{
+    margin: 10px;
+    position: absolute;
+    background: #555;
+    padding: 5px 8px;
+    color: #ccc;
+  }
+  aside section .cours-css  p{
+    font-weight: 600;
+    margin: 10px 0;
+  }
+  aside section .cours-css button{
+    padding: 13px 20px;
+    background:  #5461F1;
+    color: #fff;
+    border: none;
+  }
+  
+  aside section .cours-js .c-html{
+    width: 100%;
+    height: 300px;
+    background: #D8D301;
+    margin: 15px auto;
+    position: relative;
+  }
+  
+  aside section .cours-js .c-html i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    color: #E7E467;
+    font-size: 200px;
+    filter: drop-shadow(5px 5px 3px black)
+  }
+  
+  
+  aside section .cours-js .c-html p{
+    margin: 10px;
+    position: absolute;
+    background: #555;
+    padding: 5px 8px;
+    color: #ccc;
+  }
+  aside section .cours-js  p{
+    font-weight: 600;
+    margin: 10px 0;
+  }
+  aside section .cours-js button{
+    padding: 13px 20px;
+    background:  #5461F1;
+    color: #fff;
+    border: none;
+  }
