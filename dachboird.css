@@ -132,10 +132,11 @@
     padding-right: 110px;
     font-size: 20px;
     cursor: none;
+    font-size: 16px;
   }
   .wrap header .list ul li i{
     color: var(--bgblue);
-    font-size: 24px;
+    font-size: 22px;
   }
   .wrap header .list ul li:hover{
     background: var(--bgblue);
